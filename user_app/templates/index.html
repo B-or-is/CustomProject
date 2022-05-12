@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <h2>Выберите:</h2>
+{#    <a href="index.html"><h1>На главную страницу</h1></a>#}
+    Тест кастомизации модели пользователя
+    <ul>
+        <li><a href='admin'>Панель администратора</a></li>
+        <li><a href={% url 'signup'     %}>Создание proxy</a></li>
+        <li><a href={% url 'signup2'    %}>Профиль пользователя</a></li>
+        <li><a href={% url 'all_users'  %}>Просмотр пользователей (вариант proxy)</a></li>
+        <li><a href={% url 'all_users2' %}>Просмотр пользователей (вариант с профилем)</a></li>
+    </ul>
+</body>
+</html>

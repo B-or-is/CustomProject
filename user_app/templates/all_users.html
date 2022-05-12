@@ -1,0 +1,42 @@
+{#<table>#}
+{#    {% for user in users %}#}
+{#        <tr>#}
+{#            <th>{{ user.id }}</th>#}
+{#            <th>{{ user.username }}</th>#}
+{#        </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+<style>
+    table {
+        border: 1px solid #399;
+        border-spacing: 2px;
+        padding: 5px;
+    }
+    th {
+        border: 1px solid #399;
+        border-spacing: 2px;
+        padding: 5px;
+    }
+</style>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Photo</th>
+        <th>Phone</th>
+        <th>Birthday</th>
+        <th>Username</th>
+        <th>First_name</th>
+        <th>Last_name</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <th>{{ user.id }}</th>
+            <th>{{ user.profile.photo }}</th>
+            <th>{{ user.profile.phone }}</th>
+            <th>{{ user.profile.birthday }}</th>
+            <th>{{ user.username }}</th>
+            <th>{{ user.first_name }}</th>
+            <th>{{ user.last_name }}</th>
+        </tr>
+    {% endfor %}
+</table>
